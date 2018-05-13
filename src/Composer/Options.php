@@ -3,7 +3,7 @@
  * Date: 13/05/2018
  */
 
-namespace leadingfelows\Composer;
+namespace leadingfellows\Composer;
 
 class Options {
 
