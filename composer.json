@@ -1,7 +1,7 @@
 {
   "name": "leadingfellows/drupal_starter_kit_composer",
   "description": "Composer Plugin for Drupal 8 projects",
-  "type": "composer-plugin"
+  "type": "composer-plugin",
   "require": {
     "php": ">=7.0",
     "ext-simplexml" : "*",
