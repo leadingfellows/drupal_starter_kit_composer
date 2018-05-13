@@ -73,7 +73,6 @@ class MainPlugin implements PluginInterface, Capable {
         $this->fs = new Filesystem();
         //if ($this->io->isVeryVerbose() || $this->io->isDebug())
         $this->logger->debug("activate composer plugin leadingfellows/drupal_starter_kit_project");
-        $this->logger->info("param=".$this->getOption());
     }
     /**
      * get option value for this plugin
