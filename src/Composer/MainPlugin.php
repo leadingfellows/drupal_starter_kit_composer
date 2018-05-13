@@ -83,7 +83,7 @@ class MainPlugin implements PluginInterface, Capable {
      *
      * @return mixed option value
      */
-    public function getOption($option_key=null) {
+    public function getOption($option_key = '') {
         $option_value = $this->options->get($option_key);
         return $option_value;
     }
