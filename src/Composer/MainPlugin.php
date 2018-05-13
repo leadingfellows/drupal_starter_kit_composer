@@ -21,6 +21,10 @@ use DrupalFinder\DrupalFinder;
 
 
 class MainPlugin implements PluginInterface, Capable {
+
+
+    use \leadingfellows\SystemHelpersTrait;
+
     /**
      * @var Composer
      */
@@ -79,7 +83,7 @@ class MainPlugin implements PluginInterface, Capable {
      *
      * @return mixed option value
      */
-    public function getOption($option_key) {
+    public function getOption($option_key=null) {
         $option_value = $this->options->get($option_key);
         return $option_value;
     }
