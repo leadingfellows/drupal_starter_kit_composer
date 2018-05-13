@@ -62,7 +62,7 @@ class MainPlugin implements PluginInterface, Capable {
     {
         $this->composer = $composer;
         $this->io = $io;
-        $this->options = new Options($composer);
+        $this->options = new \leadingfellows\Composer\Options($composer);
         $this->logger = new Logger('', $io);
         $this->executor = new ProcessExecutor($this->io);
         $this->rootdir = empty($_SERVER['PWD']) ? getcwd() : $_SERVER['PWD'];
