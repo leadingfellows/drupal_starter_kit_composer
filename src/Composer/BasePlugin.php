@@ -24,7 +24,6 @@ class BasePlugin implements PluginInterface, Capable {
 
 
     use \leadingfellows\SystemHelpersTrait;
-    use \leadingfellows\Helpers;
 
     /**
      * @var Composer
