@@ -27,7 +27,7 @@
     "oomphinc/composer-installers-extender": ">=1.1",
     "wikimedia/composer-merge-plugin": ">=1.4.1",
     "composer/installers": ">=1.2",
-
+    "cweagans/composer-patches": "~1.6",
 
     "webflo/drupal-finder": ">=1.1.0",
     "drupal/drupal-library-installer-plugin": ">=0.1",
@@ -35,9 +35,20 @@
     "sensiolabs/security-checker": "~4.1",
     "drupal-composer/drupal-security-advisories": "8.x-dev"
   },
+  "config": {
+      "sort-packages": true,
+      "secure-http": false,
+      "optimize-autoloader": true,
+      "discard-changes": true
+    },
   "suggest": {
     "ext-opcache": "PHP OPcache extension",
-    "leadingfellows/drupal-composer-remove-git": "allow to remove .git directories from projects"
+    "leadingfellows/drupal-composer-remove-git": "allow to remove .git directories from projects",
+    "drupal-composer/drupal-scaffold": "Composer Plugin for updating the Drupal scaffold files when using drupal/core",
+        "drupal/core": "Drupal core (without scaffold files)",
+        "drupal/console": "Drupal console command-line utility",
+        "drush/drush": "Drush command-line utility",
+        "zaporylie/composer-drupal-optimizations": "Composer plugin to improve composer performance for Drupal projects"
   },
   "autoload": {
     "psr-4": {
@@ -45,6 +56,16 @@
     }
   },
   "extra": {
-    "class": "leadingfellows\\Composer\\MainPlugin"
+    "class": "leadingfellows\\Composer\\MainPlugin",
+	"enable-patching": true,
+    "merge-plugin": {
+            "recurse": false,
+            "replace": false,
+            "ignore-duplicates": true,
+            "merge-dev": false,
+            "merge-extra": true,
+            "merge-extra-deep": true,
+            "merge-scripts": true
+    }
   }
 }
